@@ -1,0 +1,73 @@
+site_name: Endurance Training Evidence
+site_url: https://boseranit.github.io/endurance-training-evidence/
+repo_url: https://github.com/boseranit/endurance-training-evidence
+edit_uri: blob/main/docs/
+docs_dir: docs
+
+theme:
+  name: material
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - content.action.view
+
+plugins:
+  - search
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - sane_lists
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
+
+nav:
+  - Start here: index.md
+  - Training topics:
+      - How cycling performance develops: topics/training-model.md
+      - Aerobic fitness, volume and easy intensity: topics/physiology-volume-endurance.md
+      - Distribution, periodization and recovery: topics/distribution-periodization-recovery.md
+      - VO₂-focused intervals: topics/vo2-intervals.md
+      - Threshold, durability and long rides: topics/threshold-durability-long-rides.md
+      - Fueling and energy availability: topics/fueling-energy-availability.md
+      - Sleep, heat and iron: topics/sleep-heat-iron.md
+      - Strength, warm-ups and mobility: topics/strength-warmups-mobility.md
+      - Load and adaptation monitoring: topics/load-monitoring.md
+      - Designing a recoverable program: topics/program-design.md
+  - Conclusions, sources and updates:
+      - Key conclusions: evidence/claims.md
+      - Supporting sources: evidence/bibliography.md
+      - Glossary: CONTEXT.md
+      - Checking the starting claims: evidence/starting-claims.md
+      - Where the evidence is still weak: evidence/research-gaps.md
+      - Research and maintenance method: research-methods.md
+      - Search history: evidence/searches.md
+      - Change history: CHANGELOG.md

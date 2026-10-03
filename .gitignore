@@ -1,0 +1,8 @@
+.venv/
+site/
+
+.cache/
+__pycache__/
+*.py[cod]
+
+/initial_prompt.md
